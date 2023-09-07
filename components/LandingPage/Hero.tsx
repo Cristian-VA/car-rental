@@ -1,25 +1,21 @@
 "use client"
 
 import React from 'react'
-import styled from "styled-components"
 import Image from 'next/image'
-import { CustomButton } from '.'
+import { CustomButton } from '..'
 
-const HeroSection = styled.section`
-background-image: url(/Images/HeroBg.png);
-background-size: cover;
-min-height: 100vh;
-`
+
+
 
 export default function Hero() {
 
   const handleClick = () => {}
 
   return (
-    <HeroSection >
-      <div className='flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto text-neutral-800'>
+    <section className='Herosection' >
+      <div className='flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto text-neutral-700'>
         <div className="flex-1 pt-36  sm:px-12 px-6">
-            <h1 className='2xl:text-[72px] sm:text-[64px] text-[50px] font-bold'>
+            <h1 className='2xl:text-[72px] sm:text-[64px] text-[50px] font-bold '>
                  Rent Your Dream Ride{' '}  
                     <span className='text-red-600 border-b-4 border-neutral-600'>
                          Today
@@ -48,7 +44,7 @@ export default function Hero() {
                 
           </div>
           </div>
-    </HeroSection>
+    </section>
   )
 }
 

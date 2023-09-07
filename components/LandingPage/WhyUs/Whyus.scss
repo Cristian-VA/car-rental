@@ -1,0 +1,42 @@
+
+
+.Whyus-section{
+    
+        background-image: url(/Images/WhyusBg.png);
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+     
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
+
+.logo-bar{
+    background: white;
+    box-shadow: 0px 0px 15px -3px #a3a3a3;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.logo-slide{
+    
+ width: 2288px;
+    display: inline-block;
+    
+    
+
+
+    animation: 15s slide infinite linear;
+}
