@@ -1,5 +1,6 @@
 import React from 'react'
 import { Hero, Whyus } from '..'
+import { ContactBanner } from './ContactBanner/ContactBanner'
 
 
 const LandingPage = () => {
@@ -7,6 +8,7 @@ const LandingPage = () => {
     <>
     <Hero/>
     <Whyus/>
+    <ContactBanner/>
     </>
   )
 }

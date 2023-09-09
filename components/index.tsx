@@ -2,7 +2,7 @@ import Hero from "./LandingPage/Hero";
 import { Whyus } from "./LandingPage/WhyUs/Whyus";
 import Navbar from "./NavBar/Navbar";
 import Footer from "./Footer";
-import CustomButton from "./CustomButton";
+import CustomButton from "./Reusable/CustomButton";
 import LandingPage from "./LandingPage/LandingPage";
 
 export {

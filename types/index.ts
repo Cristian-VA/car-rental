@@ -6,3 +6,9 @@ export interface CustomButtonsProps {
     handleClick?: 
     MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface ContainerWuProps {
+    title: string;
+    paragraph: string;
+    icon: any;
+}

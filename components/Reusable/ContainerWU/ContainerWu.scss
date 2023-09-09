@@ -1,0 +1,40 @@
+.box{
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 8px #dc2626 solid;
+    border-radius: 8px ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+
+    @media (min-width: 767px) {
+        
+            padding: 35px;
+        
+    
+    }
+    
+
+}
+
+.circle-container{
+    background-image: url(/Images/WhyUsBg.png);
+    background-size: cover;
+    background-repeat: repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
