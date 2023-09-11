@@ -11,4 +11,10 @@ export interface ContainerWuProps {
     title: string;
     paragraph: string;
     icon: any;
+    styles: string;
+    customer: string;
+    name:string;
+    position: string;
+    
 }
+

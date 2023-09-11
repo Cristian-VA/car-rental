@@ -1,0 +1,24 @@
+.form{
+    background-color: white;
+    padding: 25px;
+    border-top: 16px solid #dc2626;
+    color: #737373;
+    
+    width: 630px;
+    border-radius: 8px ;
+
+    display: flex;
+    flex-direction: column;
+  
+
+    @media (max-width: 767px) {
+        
+        width: 100%;
+    }
+}
+
+.contact-form{
+background-color: rgb(246, 246, 246);    
+    
+    
+}

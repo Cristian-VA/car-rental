@@ -8,6 +8,12 @@ import { motion } from 'framer-motion'
 
 export const Whyus = () => {
 
+    const propsBlank = {
+      customer: "",
+      name: "",
+      position: ""
+    }
+
     const svgArray = ["Audi" , "Chevrolet", "Citroen", "Ford", "Honda", "Jeep", "Kia", "Mitsubishi", "Nissan", "Subaru", "Suzuki"]
 
     const MapSvgs = svgArray.map( brand => {
@@ -60,23 +66,32 @@ export const Whyus = () => {
                 title='Modern and customized fleet'
                 paragraph="With an extensive fleet of over 500 vehicles available, you'll have the flexibility to select the ideal vehicle for a wide range of activities, whether it's for personal or business purposes."
                 icon="BsReverseLayoutTextWindowReverse"
+                styles= "border-b-8 border-red-600 text-center items-center"
+                {...propsBlank}
                 />
 
                 <Container
                 title='Comprehensive advisory services'
                 paragraph='Receive comprehensive and ongoing guidance, get insights into vehicle performance, equipment types, and everything you need to carry out your activities efficiently and safely.'
                 icon="BsBriefcase"
+                styles= "border-b-8 border-red-600 text-center items-center"
+                {...propsBlank}
+                
                 />
 
                 <Container
                 title='We have our own maintenance workshop'
                 paragraph='Greater safety and reliability for equipped vehicles also result in cost savings on maintenance and repairs. We provide a quick and efficient solution to any issues that may arise with the vehicle.'
                 icon="BsGear"
+                styles= "border-b-8 border-red-600 text-center items-center"
+                {...propsBlank}
                 />
                 <Container
                 title='Immediate response to mechanical emergencies.'
                 paragraph='Our team of experts will always be available to provide you with a quick and efficient response, ensuring that you can continue your activities without any disruptions.'
-                icon=""
+                icon="BsJournalMedical"
+                styles= "border-b-8 border-red-600 text-center items-center"
+                {...propsBlank}
                 />
           </div>
 
