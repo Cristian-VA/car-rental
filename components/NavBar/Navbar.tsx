@@ -4,20 +4,22 @@ import { motion } from "framer-motion"
 import React from 'react'
 import Link from "next/link"
 import Image from "next/image"
-import {styled} from "styled-components"
+import { usePathname } from 'next/navigation'
 import { BiMenu, BiX } from "react-icons/bi";
 
 import "./Navbar.scss"
 
 
 export default function Navbar() {
+  const pathname = usePathname()
 
+  const navLinks = ["Cars", "About"]
   const [toggle, setToggle] = useState(false)
 
 
   return (
     <nav className='Navbar '>
-        
+              <Link  href="/" >
               <div className='flex gap-2'>
                     <Image
                     className='logo my-auto'
@@ -32,18 +34,25 @@ export default function Navbar() {
                         <span className='text-red-600'> Rentals </span>
                     </h1>                    
               </div>
+              </Link>
 
               <ul className='navbar-links '>
-                <li>
-                  <a href="" className='hover:text-red-600 transition'> Cars</a>
-                </li>
+              {navLinks.map((link) => {
+                const isActive = pathname === `/${link}`
+                
+                        return (
+                          <Link
+                            className={isActive ? 'text-red-600 ml-6' : 'link  ml-6'}
+                            href={`/${link}`}
+                            key={link}
+                          >
+                            {link}
+                          </Link>
+                        )
+                      })}
 
                 <li>
-                  <a href="" className='hover:text-red-600 transition'> About</a>
-                </li>
-
-                <li>
-                  <a href="" className='hover:text-red-600 transition'> Sign Up</a>
+                  <Link href="" className='link'> Sign Up</Link>
                 </li>
               </ul>
 
