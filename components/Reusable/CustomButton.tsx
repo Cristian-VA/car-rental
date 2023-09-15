@@ -23,4 +23,3 @@ const CustomButton = ({title, containerStyles, handleClick}: CustomButtonsProps)
 
 export default CustomButton
 
-//By default all components in nextjs are server side => this one needs to be a client component

@@ -4,6 +4,9 @@ import Navbar from "./NavBar/Navbar";
 import Footer from "./Footer";
 import CustomButton from "./Reusable/CustomButton";
 import LandingPage from "./LandingPage/LandingPage";
+import CustomFilter from "./Reusable/CustomFilter/CustomFilter";
+import SearchBar from "./Reusable/Searchbar/SearchBar";
+import CarCard from "./Reusable/CarCard/CarCard";
 
 export {
     Navbar,
@@ -11,6 +14,8 @@ export {
     Whyus,
     Footer,
     CustomButton,
-    LandingPage
-    
+    LandingPage,
+    CustomFilter,
+    SearchBar,
+    CarCard    
 }
