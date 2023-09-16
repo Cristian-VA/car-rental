@@ -11,6 +11,7 @@ import {BsFillFuelPumpFill} from "react-icons/bs"
 import {motion} from "framer-motion"
 import CarDetails from '../CarDetails/CarDetails'
 
+
 import "./CarCard.scss"
 
 interface CarCardProps {
@@ -22,6 +23,8 @@ const CarCard = ({ car }: CarCardProps) => {
     const carRentPrice =  calculateCarRent(city_mpg, year)
 
     const [isOpen, setIsOpen]= useState(false)
+
+    const [isShowing, setIsShowing] = useState(false)
 
   return (
     <div className='flex flex-col p-6 justify-center items-start text-black-100 transition car-card-bg  hover:shadow-md rounded-3xl group'>
@@ -74,10 +77,13 @@ const CarCard = ({ car }: CarCardProps) => {
             <div 
             className='hidden group-hover:flex absolute bottom-0 w-full z-10'
             >
-            <CustomButton
-             handleClick={() => setIsOpen(true)}
-            title='View Details'
-            containerStyles="w-full py-[16px] bg-red-400 rounded-3xl text-neutral-700 font-semibold text-lg transition"/>
+
+
+                <CustomButton
+                handleClick={() => setIsOpen(true)}
+                title='View Details'
+                containerStyles="w-full py-[16px] bg-red-400 rounded-3xl text-neutral-700 font-semibold text-lg transition"/>
+
             </div> 
         
         </div>
