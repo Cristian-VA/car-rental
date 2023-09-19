@@ -10,7 +10,7 @@ import {GiCarWheel} from "react-icons/gi"
 import {BsFillFuelPumpFill} from "react-icons/bs"
 import {motion} from "framer-motion"
 import CarDetails from '../CarDetails/CarDetails'
-
+import { getCarImage } from '@/utils'
 
 import "./CarCard.scss"
 
@@ -46,10 +46,11 @@ const CarCard = ({ car }: CarCardProps) => {
 
         <div className='relative w-full h-40 my-3 object-contain'>
             <Image
-            src="/Images/redCar.png"
+            src={getCarImage(car)}
             alt='car'
             fill
             priority
+            className='object-contain'
             />
 
         </div>
@@ -57,17 +58,17 @@ const CarCard = ({ car }: CarCardProps) => {
         <div className='relative flex w-full mt-2  '>
             <div className='flex group-hover:invisible w-full justify-center gap-2 transition   rounded-3xl text-neutral-300 font-semibold'>
 
-                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-red-500  w-24  rounded-3xl shadow-sm'>
+                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-opacity-10 bg-neutral-50 w-24  rounded-3xl shadow-sm'>
                         <PiSteeringWheelFill className="w-7 h-7 mx-auto "/>
                         <p> {transmission === "a" ? "Automatic" : "Manual"}</p>
                 </div>
 
-                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-red-500  w-24  rounded-3xl shadow-sm'>
+                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-opacity-10 bg-neutral-50   w-24  rounded-3xl shadow-sm'>
                         <GiCarWheel className="w-7 h-7 mx-auto"/>
                         <p> {drive.toUpperCase()}</p>
                 </div>
 
-                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-red-500  w-24  rounded-3xl shadow-sm'>
+                <div className='flex flex-col justify-center items-center gap-2  box-border	 py-3 bg-opacity-10 bg-neutral-50   w-24  rounded-3xl shadow-sm'>
                         <BsFillFuelPumpFill className="w-7 h-7 mx-auto"/>
                         <p> {city_mpg} MPG</p>
                 </div>
@@ -82,7 +83,7 @@ const CarCard = ({ car }: CarCardProps) => {
                 <CustomButton
                 handleClick={() => setIsOpen(true)}
                 title='View Details'
-                containerStyles="w-full py-[16px] bg-red-400 rounded-3xl text-neutral-700 font-semibold text-lg transition"/>
+                containerStyles="w-full py-[16px] bg-neutral-50 bg-opacity-20 rounded-3xl text-neutral-50 font-semibold text-lg transition"/>
 
             </div> 
         
