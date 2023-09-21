@@ -2,12 +2,19 @@ import React from 'react'
 import "./cars.scss"
 import { SearchBar, CustomFilter, CarCard } from '@/components'
 import { fetchCars } from '@/utils'
+import { fuels, yearsOfProduction } from '@/components/Info/info'
+import ShowMore from '@/components/Reusable/ShowMore/ShowMore'
 
+const  Cars = async ({searchParams}) => {
 
-const  Cars = async () => {
-
-  const allCars = await fetchCars()
-  console.log(allCars)
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || "2022",
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams. model || "",
+  })
+  
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (
 
@@ -17,15 +24,17 @@ const  Cars = async () => {
             <p className='text-md md:text-xl text-neutral-500 mt-2'>Exlplore our collection and find what you are looking for</p>
 
             <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
-                <SearchBar/>
+                <SearchBar
+                pageNumber= {(searchParams.pageNumber || 10)/10}
+                isNext= {(searchParams.limit || 10) > allCars.length}/> 
 
                
 
 
 
                 <div className='flex justify-start flex-wrap items-center gap-2'>
-                    <CustomFilter title="fuel"/>
-                    <CustomFilter title="year"/>
+                    <CustomFilter title="fuel" options={fuels}/>
+                    <CustomFilter title="year" options={yearsOfProduction}/>
                     
                 </div>
             </div>
@@ -38,7 +47,11 @@ const  Cars = async () => {
                       ))}
 
                     </div>
-
+                        <ShowMore
+                        pageNumber={(searchParams.limit || 10)/ 10}
+                        isNext={(searchParams.limit || 10) > allCars.length}
+                        
+                        />
                   </section>
                 ):
                 (
@@ -55,3 +68,5 @@ const  Cars = async () => {
 }
 
 export default  Cars
+
+//app shows 10 cars per page by default, which divided by 10 shows thats we are on the first page

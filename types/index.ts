@@ -38,3 +38,26 @@ export interface CarProps {
     transmission: string,
     year: number
 }
+
+export interface filterProps {
+    manufacturer: string,
+    year: number,
+    fuel: string,
+    limit: number,
+    model: string,
+}
+
+export interface OptionProps{
+    title: string,
+    value: string
+}
+
+export interface customFilterProps {
+    title: string,
+    options: OptionProps[]
+}
+
+export interface showMoreProps{
+    pageNumber: number
+    isNext: boolean
+}

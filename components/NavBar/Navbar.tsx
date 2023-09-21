@@ -57,7 +57,7 @@ export default function Navbar() {
               </ul>
 
 
-              <div className='app__navbar-menu'>
+              <div className='app__navbar-menu '>
                 <BiMenu onClick={() => setToggle(true)}/>
 
                 { toggle?  (

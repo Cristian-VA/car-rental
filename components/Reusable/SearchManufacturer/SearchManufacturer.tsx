@@ -20,7 +20,7 @@ const SearchManufacturer = ({setManufacturer, manufacturer}:SearchManufacturerPr
 
     return (
 
-    <div className='flex-1 max-sm:w-full flex justify-start items-center'>
+    <div className='flex-1 max-sm:w-full flex justify-start items-center '>
         <Combobox
         value={manufacturer}
         onChange={setManufacturer}>
@@ -37,7 +37,7 @@ const SearchManufacturer = ({setManufacturer, manufacturer}:SearchManufacturerPr
                 </Combobox.Button>
 
                 <Combobox.Input
-                className="w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-neutral-50 outline-none cursor-pointer text-sm"
+                className="w-full h-[48px] pl-12 p-4  rounded-l-full max-sm:rounded-full bg-neutral-50 outline-none cursor-pointer text-sm"
                 placeholder="Volkswagen"
                 displayValue={(manufacturer:string) => manufacturer}
                 onChange={(e) => setQuery(e.target.value)}
