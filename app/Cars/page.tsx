@@ -1,11 +1,11 @@
 import React from 'react'
 import "./cars.scss"
-import { SearchBar, CustomFilter, CarCard } from '@/components'
+import { SearchBar, CustomFilter, CarCard, NavLocation } from '@/components'
 import { fetchCars } from '@/utils'
 import { fuels, yearsOfProduction } from '@/components/Info/info'
 import ShowMore from '@/components/Reusable/ShowMore/ShowMore'
 
-const  Cars = async ({searchParams}) => {
+const  Cars = async ({searchParams}:any) => {
 
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
@@ -20,19 +20,21 @@ const  Cars = async ({searchParams}) => {
 
     <div className='cars'>
         <div className='max-w-[1440px] mx-auto text-neutral-700 sm:px-12 px-6'>
-            <h1 className="text-2xl md:text-4xl font-semibold"> Car Catalogue </h1>
+
+          <NavLocation
+          name="Cars"/>
+
+            <h1 className="text-2xl md:text-4xl font-bold text-red-600 "> Car Catalogue </h1>
             <p className='text-md md:text-xl text-neutral-500 mt-2'>Exlplore our collection and find what you are looking for</p>
 
             <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
-                <SearchBar
-                pageNumber= {(searchParams.pageNumber || 10)/10}
-                isNext= {(searchParams.limit || 10) > allCars.length}/> 
+                <SearchBar/> 
 
                
 
 
 
-                <div className='flex justify-start flex-wrap items-center gap-2'>
+                <div className='flex justify-start flex-wrap items-center gap-2 mt-2'>
                     <CustomFilter title="fuel" options={fuels}/>
                     <CustomFilter title="year" options={yearsOfProduction}/>
                     

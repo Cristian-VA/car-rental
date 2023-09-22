@@ -7,7 +7,7 @@ import LandingPage from "./LandingPage/LandingPage";
 import CustomFilter from "./Reusable/CustomFilter/CustomFilter";
 import SearchBar from "./Reusable/Searchbar/SearchBar";
 import CarCard from "./Reusable/CarCard/CarCard";
-
+import NavLocation from "./Reusable/NavLocation/NavLocation";
 export {
     Navbar,
     Hero,
@@ -17,5 +17,6 @@ export {
     LandingPage,
     CustomFilter,
     SearchBar,
-    CarCard    
+    CarCard ,
+    NavLocation   
 }

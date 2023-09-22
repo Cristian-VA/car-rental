@@ -21,7 +21,7 @@ export interface ContainerWuProps {
 
 export interface SearchManufacturerProps {
     setManufacturer: (manufacturer:string) => void
-    manufacturer: "string"
+    manufacturer: string
 }
 
 export interface CarProps {
