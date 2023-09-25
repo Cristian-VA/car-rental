@@ -27,7 +27,9 @@ const CarCard = ({ car }: CarCardProps) => {
     const [isShowing, setIsShowing] = useState(false)
 
   return (
-    <div className='flex flex-col p-6 justify-center items-start text-black-100 transition car-card-bg  hover:shadow-md rounded-3xl group'>
+    <motion.div className='flex flex-col p-6 justify-center items-start text-black-100 transition car-card-bg  hover:shadow-md rounded-3xl group'
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1, transition: { duration: 0.5 } }}>
         <div className='w-full flex justify-between items-start gap-2'>
             <h2 className='text-[22px] leading-[26px] font-bold capitalize text-neutral-700'>
                 {make} {model}
@@ -91,7 +93,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
         <CarDetails isOpen = {isOpen} closeModal = {() => setIsOpen(false)} car={car} />
 
-    </div>
+    </motion.div>
   )
 }
 

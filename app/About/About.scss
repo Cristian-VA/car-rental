@@ -1,10 +1,34 @@
 .about{
     min-height: 100vh;
     padding-top: 130px;
-    
-    
+    background-image: url(/Images/AboutBg1.png);
+        background-size: cover;
+        background-repeat: repeat;
+      
 
     @media (max-width: 767px) {
         padding-top: 100px;
       }
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+  }
+  
+  .grid-item {
+   
+   
+    text-align: center;
+
+  }
+
+  @media screen and (max-width: 767px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+    }
+  }

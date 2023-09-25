@@ -1,9 +1,12 @@
+"use client"
+
 import React from 'react'
 import "./cars.scss"
 import { SearchBar, CustomFilter, CarCard, NavLocation } from '@/components'
 import { fetchCars } from '@/utils'
 import { fuels, yearsOfProduction } from '@/components/Info/info'
 import ShowMore from '@/components/Reusable/ShowMore/ShowMore'
+import {motion} from "framer-motion"
 
 const  Cars = async ({searchParams}:any) => {
 
@@ -20,7 +23,10 @@ const  Cars = async ({searchParams}:any) => {
 
     <div className='cars'>
         <div className='max-w-[1440px] mx-auto text-neutral-700 sm:px-12 px-6'>
-
+        
+        <motion.div className='max-w-[1440px] mx-auto text-neutral-700 sm:px-12 px-6'
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
           <NavLocation
           name="Cars"/>
 
@@ -29,6 +35,8 @@ const  Cars = async ({searchParams}:any) => {
 
             <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
                 <SearchBar/> 
+
+                
 
                
 
@@ -39,7 +47,11 @@ const  Cars = async ({searchParams}:any) => {
                     <CustomFilter title="year" options={yearsOfProduction}/>
                     
                 </div>
+                
             </div>
+            </motion.div>
+
+            
 
             {!isDataEmpty ? (
                   <section>
