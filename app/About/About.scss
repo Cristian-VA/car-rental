@@ -32,3 +32,37 @@
       grid-template-rows: repeat(6, 1fr);
     }
   }
+
+
+  .car-group{
+   
+    
+    background-image: url(/Images/GroupBg.png);
+        background-size: cover;
+       
+    
+}
+
+
+.background{
+    
+  background-image: url(/Images/WhyUsBg.png);
+  background-size: cover;
+
+}
+
+
+.background-end{
+    
+  background-image: url(/Images/AboutEnd22.png);
+  background-size: cover;
+  
+
+  width: 100%;
+  height: 500px;
+
+  @media screen and (max-width: 767px) {
+    height: 350px;
+    }
+
+}

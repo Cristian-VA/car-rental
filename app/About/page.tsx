@@ -5,9 +5,9 @@ import "./About.scss"
 import {motion} from "framer-motion"
 import {ImHeadphones} from "react-icons/im"
 import {FaMapLocationDot} from "react-icons/fa6"
-import {BiSolidCarGarage} from "react-icons/bi"
+import {BiSolidCarGarage, BiLogoTwitter} from "react-icons/bi"
 import {PiCertificateFill, PiSteeringWheelFill} from "react-icons/pi"
-import {AiFillSafetyCertificate} from "react-icons/ai"
+import {AiFillSafetyCertificate, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
 const About = () => {
   return (
     <>
@@ -36,7 +36,7 @@ const About = () => {
               We aspire to be the foremost company in customer satisfaction for mobile solution services, nurturing long-term trust and loyalty.
             </p>
 
-            <div>
+            <div className='mb-4'>
               <h1 className='font-semibold text-neutral-700'> Our Core Values</h1>
               <ul>
                 <li>Service Excellence</li>
@@ -61,6 +61,7 @@ const About = () => {
          </div>
     </motion.div>
 
+<div className=' bg-neutral-200 '>
     <div className='max-w-[1440px] mx-auto text-neutral-700 sm:px-12 px-6 min-h-screen flex justify-center items-center flex-col'>
 
     <motion.h1 className='text-3xl lg:text-5xl md:text-4xl mt-6 lg:mt-20 font-semibold text-neutral-700 text-center'
@@ -73,7 +74,7 @@ const About = () => {
 
         <div className="grid-container mt-10 md:mt-20">
 
-              <div className="grid-item flex flex-col">
+              <div className="grid-item flex flex-col py-12">
                 <motion.span 
                    initial={{ opacity: 0, y: 40 }}
                    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}>
@@ -197,6 +198,93 @@ const About = () => {
 
     </div>
 
+  </div>
+
+
+
+    <div className='background'>
+    <div className='max-w-[1440px] mx-auto text-neutral-700 sm:px-12 px-6 min-h-screen flex justify-center items-center flex-col  '>
+
+      <motion.div 
+     
+     whileInView={{ scale: [0, 1] }}
+     initial={{ opacity: 0 }} 
+     animate={{ opacity: 1 }} 
+     transition={{ duration: 0.6, ease: "easeInOut" }}>
+      <Image
+                        
+                        src="/Images/GroupofCars.png"
+                        width={950}
+                        height={300}
+                        alt= "logo"
+                        />
+
+      </motion.div>
+
+      <div className='w-full flex flex-col md:flex-row gap-2  lg:gap-8'>
+
+        <motion.div 
+            className="bg-white flex-1 border-2 rounded-lg flex-col flex justify-center items-center
+            py-6 text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}> 
+        
+                <h1 className='text-4xl md:text-6xl font-bold text-red-600 '> +300</h1>
+                <h1 className='text-lg md:text-2xl text-neutral-600  font-bold'> Cars <br /> in our fleet.</h1>
+                
+        </motion.div>
+
+        <motion.div 
+            className="bg-white  flex-1 border-2 rounded-lg flex-col flex justify-center items-center
+            py-6 text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}> 
+        
+                <h1 className='text-4xl md:text-6xl font-bold text-red-600 '> +320</h1>
+                <h1 className='text-lg md:text-2xl text-neutral-600  font-bold'> Satisfied Clients <br /> In the last year.</h1>
+                
+        </motion.div>
+
+        <motion.div 
+            className="bg-white  flex-1 border-2 rounded-lg flex-col flex justify-center items-center
+            py-6 text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}> 
+        
+                <h1 className='text-4xl md:text-6xl font-bold text-red-600 '> 15</h1>
+                <h1 className='text-lg md:text-2xl text-neutral-600  font-bold'> Years of experience <br /> In the Car Rental Business.</h1>
+                
+        </motion.div>
+
+        
+        </div>
+    </div>
+    </div>
+
+
+
+    <div className='background-end flex flex-col justify-center items-end'>
+         <div className='md:mr-16'>
+              <h1 className="text-4xl md:text-7xl font-bold text-neutral-50 justify max-w-sm mb-1 ">So...</h1>
+              <h1 className="text-3xl md:text-6xl font-bold text-neutral-50 justify md:max-w-xl max-w-sm mb-6"> Are You Ready to start your journey?</h1>
+              <a href="" className=' bg-red-600 py-2 px-4 rounded  text-white text-md md:text-lg  lg:text-xl transition hover:bg-neutral-700 '> Explore Our Cars</a>
+                <div className='flex gap-2 mt-4'>
+                    <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointer'>
+                      <BiLogoTwitter className="text-red-600"/>
+                    </div>
+
+                    <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointer'>
+                      <AiFillInstagram className="text-red-600"/>
+                    </div>
+
+                    <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointern'>
+                      <AiFillFacebook className="text-red-600"/>
+                    </div>
+          </div>
+         </div>
+
+         
+        </div>
 
     </>
   )
