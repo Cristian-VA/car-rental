@@ -61,3 +61,9 @@ export interface showMoreProps{
     pageNumber: number
     isNext: boolean
 }
+
+
+
+export interface contactBannerProps{
+  action: () => void
+}

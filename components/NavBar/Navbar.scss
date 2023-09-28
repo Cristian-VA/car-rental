@@ -16,6 +16,11 @@
     @media (max-width: 767px) {
       padding: 1.5em 1.5em;
     }
+
+    @media (max-width: 900px) {
+      position: fixed;
+      top: 0;
+    }
   }
 
   .logo{
@@ -81,6 +86,8 @@
     border-radius: 50%;
     z-index:10;
     
+    
+    
   
     display: flex;
     justify-content: center;
@@ -107,15 +114,20 @@
         right: 0;
      
 
-        padding: 1rem;
+        padding: 1rem 0;
         width: 100%;
         height: 100vh;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: start;
         flex-direction: column;
-        background-color: #f5f5f5;
-        z-index: 50;
+        
+       
+
+        background-image: url(/Images/NavBg.png);
+        background-size: cover;
+
+
 
        
         svg{
@@ -123,8 +135,10 @@
             height: 40px;
             color: red;
             cursor: pointer;
-           
-            margin: 1em auto 1em 1em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 1.9rem auto 1em 1em;
            }
         
         ul{
@@ -142,18 +156,18 @@
                 margin: 1rem;
                 
 
-                a{
+                .links{
                     
                     text-decoration: none;
-                    font-size: 1rem;
-                    text-transform: uppercase;
-                    font-weight: 500;
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    font-weight: 600;
                     transition: all 0.4s ease-in-out;
                     border-bottom: 2px solid white;
-
+                    color: #404040;
                     &:hover{
                         color: red;
-                        border-bottom: 2px solid var(--blue-color);
+                        border-bottom: 2px solid red;
                     }
                 }
             }          

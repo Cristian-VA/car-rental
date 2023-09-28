@@ -5,13 +5,27 @@ import Endorsements from './Endorsements/Endorsements'
 import ContactForm from './ContactForm/ContactForm'
 
 const LandingPage = () => {
+
+  const scrollToContactForm = () => {
+    // Use JavaScript to scroll to the ContactForm section
+    const contactFormSection = document.getElementById('contact-form-section');
+    if (contactFormSection) {
+      contactFormSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
     <Hero/>
     <Whyus/>
-    <ContactBanner/>
+    <ContactBanner
+    action={scrollToContactForm}/>
+
     <Endorsements/>
-    <ContactForm/>
+
+    <div id='contact-form-section'>
+      <ContactForm/>
+    </div>
     </>
   )
 }

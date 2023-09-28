@@ -17,7 +17,7 @@ const ShowMore = ({pageNumber, isNext}:showMoreProps) => {
          router.push(newPathname)
     }
   return (
-    <div className='w-full flex-center gap-5 mt-10'>
+    <div className='w-full flex-center gap-5 mt-10 mb-6'>
         {!isNext && (
             <CustomButton
             title='Show More'

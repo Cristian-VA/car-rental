@@ -5,9 +5,11 @@ import "./About.scss"
 import {motion} from "framer-motion"
 import {ImHeadphones} from "react-icons/im"
 import {FaMapLocationDot} from "react-icons/fa6"
-import {BiSolidCarGarage, BiLogoTwitter} from "react-icons/bi"
+import {BiSolidCarGarage, BiLogoTwitter,BiLogoDiscordAlt} from "react-icons/bi"
 import {PiCertificateFill, PiSteeringWheelFill} from "react-icons/pi"
 import {AiFillSafetyCertificate, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
+import Link from 'next/link'
+
 const About = () => {
   return (
     <>
@@ -267,7 +269,11 @@ const About = () => {
          <div className='md:mr-16'>
               <h1 className="text-4xl md:text-7xl font-bold text-neutral-50 justify max-w-sm mb-1 ">So...</h1>
               <h1 className="text-3xl md:text-6xl font-bold text-neutral-50 justify md:max-w-xl max-w-sm mb-6"> Are You Ready to start your journey?</h1>
-              <a href="" className=' bg-red-600 py-2 px-4 rounded  text-white text-md md:text-lg  lg:text-xl transition hover:bg-neutral-700 '> Explore Our Cars</a>
+              
+              <Link className=' bg-red-600 py-2 px-4 rounded  text-white text-md md:text-lg  lg:text-xl transition hover:bg-neutral-700  mt-6' href="/Cars">
+                  Explore Our Cars
+                </Link>
+
                 <div className='flex gap-2 mt-4'>
                     <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointer'>
                       <BiLogoTwitter className="text-red-600"/>
@@ -279,6 +285,10 @@ const About = () => {
 
                     <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointern'>
                       <AiFillFacebook className="text-red-600"/>
+                    </div>
+
+                    <div className='bg-white flex justify-center items-center h-6 w-6 rounded-full cursor-pointern'>
+                      <BiLogoDiscordAlt className="text-red-600"/>
                     </div>
           </div>
          </div>

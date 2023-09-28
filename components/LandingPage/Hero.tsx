@@ -3,13 +3,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { CustomButton } from '..'
-
+import Link from 'next/link'
 
 
 
 export default function Hero() {
 
-  const handleClick = () => {}
 
   return (
     <section className='Herosection' >
@@ -22,15 +21,13 @@ export default function Hero() {
                     </span>
               </h1>
 
-                <p className='text-[27px] text-black-100 font-light mt-5'>
+                <p className='text-[27px] text-black-100 font-light mt-5 mb-6'>
                    Explore Our Fleet of Luxury and Affordable Vehicles                
                 </p>
 
-                <CustomButton
-                title="View Cars"
-                containerStyles = {`bg-red-600 text-white mt-5 rounded`}
-                handleClick = {handleClick}
-                />
+                <Link className=' bg-red-600 py-2 px-4 rounded  text-white text-md md:text-lg  lg:text-xl transition hover:bg-neutral-700  mt-6' href="/Cars">
+                  View Cars
+                </Link>
           </div>
 
           <div className='xl:flex-[1.5] md:flex justify-end items-end w-full xl:h-screen hidden '>
